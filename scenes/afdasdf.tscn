@@ -1,0 +1,91 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/Minecrafter.Reg.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/Minecraftchmc-dBlX.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scenes/Early GameBoy.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scenes/New Piskel (1).png" type="Texture" id=4]
+[ext_resource path="res://asdf.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 28
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 60
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="New Piskel (1)" type="Sprite" parent="Control"]
+pause_mode = 2
+position = Vector2( 477.78, 434.1 )
+scale = Vector2( 47.727, 48.068 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = 312.0
+margin_top = 830.0
+margin_right = 649.0
+margin_bottom = 865.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "© 1992 MOJANG"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control"]
+margin_left = 181.859
+margin_top = 94.173
+margin_right = 784.859
+margin_bottom = 194.173
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "MINECRAFT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control"]
+margin_left = 335.621
+margin_top = 418.028
+margin_right = 608.621
+margin_bottom = 476.028
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SINGLEPLAYER"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Control"]
+margin_left = 340.116
+margin_top = 497.438
+margin_right = 613.116
+margin_bottom = 555.438
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "QUIT"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Control/Button" to="." method="_on_Button_pressed"]
